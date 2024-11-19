@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário</title>
+</head>
+<body>
+    <h1>Editar Usuário</h1>
+    <form action="/edit/<%= user.id%>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" value="<%= user.name %>"required>
+        </div>
+        <div>
+            <label for="age">Idade:</label>
+            <input type="number" name="age" id="age" value="<%= user.age %>"required>
+        </div>
+        <div>
+            <button type="submit">Atualizar Usuário</button>
+        </div>
+    </form>
+    <a href="/">Voltar para a lista de Usuários</a>
+</body>
+</html>
